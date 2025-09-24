@@ -121,7 +121,7 @@ function ResultSaver({ wpm, accuracy, finished }) {
         try {
           const username = localStorage.getItem("username") || "Guest";
 
-          await axios.post("http://localhost:5000/api/scores", {
+          await axios.post("https://typeback-9gcl.onrender.com/api/scores", {
             username,
             wpm,
             accuracy,
@@ -142,7 +142,7 @@ function ResultSaver({ wpm, accuracy, finished }) {
 
 const fetchSettings = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/set");
+      const res = await axios.get("https://typeback-9gcl.onrender.com/api/set");
       if (res.data?.testTime) {
         setTimer(res.data.testTime);
         setDefaultTime(res.data.testTime);

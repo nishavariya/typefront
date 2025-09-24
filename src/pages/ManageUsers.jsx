@@ -24,7 +24,7 @@ export default function ManageUsers() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/signup");
+        const res = await axios.get("https://typeback-9gcl.onrender.com/api/signup");
         setUsers(res.data); // API se data set karna
         setLoading(false);
       } catch (err) {

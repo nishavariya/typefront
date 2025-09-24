@@ -16,15 +16,15 @@ const AdminDashboard = () => {
   useEffect(() => {
     const fetchUsersAndScores = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/signup");
+        const res = await axios.get("https://typeback-9gcl.onrender.com/api/signup");
         setUserCount(res.data.length);
         setUsers(res.data);
 
-        const scoresRes = await axios.get("http://localhost:5000/api/scores");
+        const scoresRes = await axios.get("https://typeback-9gcl.onrender.com/api/scores");
         setScoreCount(scoresRes.data.length);
         setScores(scoresRes.data);
 
-        const Actives = await axios.get("http://localhost:5000/api/signup");
+        const Actives = await axios.get("https://typeback-9gcl.onrender.com/api/signup");
         setActiveCount(Actives.data.length);
 
         setLoading(false);

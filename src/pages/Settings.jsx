@@ -21,7 +21,7 @@ export default function Settings() {
     const fetchSettings = async () => {
       try {
         setLoading(true);
-        const res = await axios.get("http://localhost:5000/api/set");
+        const res = await axios.get("https://typeback-9gcl.onrender.com/api/set");
         setTestTime(res.data.testTime);
       } catch (err) {
         console.error("Error fetching settings:", err);
@@ -35,7 +35,7 @@ export default function Settings() {
   // ✅ Save updated settings
   const handleSave = async () => {
     try {
-  await axios.put("http://localhost:5000/api/set", { testTime });
+  await axios.put("https://typeback-9gcl.onrender.com/api/set", { testTime });
   alert("✅ Settings updated successfully");
 } catch (error) {
   console.error("❌ Error updating settings:", error.response?.data || error.message);

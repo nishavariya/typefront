@@ -34,7 +34,7 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const res = await axios.post("http://localhost:5000/api/login", {
+      const res = await axios.post("https://typeback-9gcl.onrender.com/login", {
         email,
         password,
       });
@@ -66,7 +66,7 @@ const Login = () => {
 
   const handleSignup = async () => {
     try {
-      await axios.post("http://localhost:5000/api/signup", {
+      await axios.post("https://typeback-9gcl.onrender.com/signup", {
         username,
         email,
         password,

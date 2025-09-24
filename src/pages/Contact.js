@@ -38,7 +38,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/contact", type);
+      await axios.post("https://typeback-9gcl.onrender.com/contact", type);
       setType({ name: "", email: "", subject: "", message: "" });
       setSnackbarOpen(true);
     } catch (error) {

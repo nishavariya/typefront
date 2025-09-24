@@ -23,7 +23,7 @@ export default function ManageScores() {
   useEffect(() => {
     const fetchScores = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/scores");
+        const res = await axios.get("https://typeback-9gcl.onrender.com/api/scores");
         setRows(res.data);
       } catch (err) {
         console.error("Error fetching scores:", err);
